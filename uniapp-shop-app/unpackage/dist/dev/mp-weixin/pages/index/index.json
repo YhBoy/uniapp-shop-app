@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "商城",
+  "usingComponents": {
+    "index-swiper": "/components/index/indexSwiper",
+    "recommed": "/components/index/recommend",
+    "card": "/components/common/Card"
+  }
+}

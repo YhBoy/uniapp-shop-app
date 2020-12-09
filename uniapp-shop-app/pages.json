@@ -1,0 +1,78 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "商城",
+				"app-plus":{
+						"scrollIndicator":"none",
+						"titleNView":{
+								"buttons":[
+									{
+										"color":"#989898",
+										"float":"left",
+										"colorPressed":"#fd68001",
+										"fontSize":"22px",
+										"fontSrc":"./static/iconfont.ttf",
+										"text":"\ue637"
+									},
+									{
+										"color":"#989898",
+										"float":"right",
+										"colorPressed":"#fd68001",
+										"fontSize":"22px",
+										"fontSrc":"./static/iconfont.ttf",
+										"text":"\ue606"
+									}
+								]
+						}
+				}
+			}
+		}
+	    ,{
+            "path" : "pages/category/category",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/cart/cart",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/user",
+            "style" : {}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+	    "color": "#7A7E83",
+	    "selectedColor": "#3cc51f",
+	    "borderStyle": "black",
+	    "backgroundColor": "#ffffff",
+	    "list": [{
+	        "pagePath": "pages/index/index",
+	        "iconPath": "static/tabbar/index.png",
+	        "selectedIconPath": "static/tabbar/index-selected.png",
+	        "text": "首页"
+	    }, {
+	        "pagePath": "pages/category/category",
+	        "iconPath": "static/tabbar/categery.png",
+	        "selectedIconPath": "static/tabbar/categery_selected.png",
+	        "text": "分类"
+	    },{
+	        "pagePath": "pages/cart/cart",
+	        "iconPath": "static/tabbar/cart.png",
+	        "selectedIconPath": "static/tabbar/cart-selected.png",
+	        "text": "购物车"
+	    },{
+	        "pagePath": "pages/user/user",
+	        "iconPath": "static/tabbar/user.png",
+	        "selectedIconPath": "static/tabbar/user-selected.png",
+	        "text": "个人中心"
+	    }]
+	}
+}
