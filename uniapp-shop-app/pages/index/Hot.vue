@@ -1,6 +1,6 @@
 <template>
-	<view class="product-list">
-			<ProductListItem :productListData="productListData" itemW="375rpx" />
+	<view>
+		<ProductListItem  :productListData="productListData"  itemW="250rpx"/>
 	</view>
 </template>
 
@@ -11,7 +11,7 @@
 			ProductListItem
 		},
 		data(){
-			return{
+			return {
 				productListData:[
 					{
 						id:1,
@@ -31,6 +31,14 @@
 					},
 					{
 						id:3,
+						imgUrl:'../../static/img/Children2.jpg',
+						oldPrice:'159',
+						name:'爆款大衣',
+						newPrice:'299',
+						discount:'5.2'
+					},
+					{
+						id:4,
 						imgUrl:'../../static/img/Children2.jpg',
 						oldPrice:'159',
 						name:'爆款大衣',

@@ -1,6 +1,6 @@
 <template>
 	<view class="item-wrap">
-		<view class="item" v-for="item in productListData" :key="item.id">
+		<view class="item" v-for="item in productListData" :key="item.id" :style="'width:'+itemW">
 			<image class="item-img" :src="item.imgUrl" mode=""></image>
 			<view class="item-content">
 					<text class="item-name">{{item.name}}</text>
@@ -17,7 +17,11 @@
 <script>
 	export default {
 		props:{
-			productListData:Array
+			productListData:Array,
+			itemW:{
+				type:String,
+				default:'375rpx'
+			}
 		}
 	}
 </script>

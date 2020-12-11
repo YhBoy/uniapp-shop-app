@@ -1,13 +1,15 @@
 <template>
 	<view class="index">
-		<IndexSwiper />
+		<!-- <IndexSwiper />
 		<Recommed />
 		<Card title="猜你喜欢" />
-		<ProductList />
-		<!-- <view class="text-area f-active-color">
-			文字
-		</view>
-		<view class="iconfont icon-dkw_xiaoxi">123</view> -->
+		<ProductList /> -->
+		
+		<Banner /> 
+		<Icons />
+		<Hot />
+		
+		
 	</view>
 </template>
 
@@ -16,12 +18,18 @@
 	import Recommed from '@/components/index/recommend.vue'
 	import Card from '@/components/common/Card.vue'
 	import ProductList from '@/components/common/ProductList.vue'
+	import Banner from '@/pages/index/Banner.vue'
+	import Icons from '@/pages/index/Icons.vue'
+	import Hot from '@/pages/index/Hot.vue'
 	export default {
 		components:{
 			IndexSwiper,
 			Recommed,
 			Card,
-			ProductList
+			ProductList,
+			Banner,
+			Icons,
+			Hot
 		},
 		data() {
 			return {
