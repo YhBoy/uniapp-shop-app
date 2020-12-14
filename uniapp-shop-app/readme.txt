@@ -38,7 +38,7 @@
 	
 
 swiper的坑
-	Image 上的class  设置宽高  并且 要给swiper 设置 和 Image上class一样的宽高 才能使图片显示出来
+	Image 上的class  设置宽高  并且 要给swiper 设置 和 Image上class一样的宽高 才能使图片显示出来                  
 
 
 	

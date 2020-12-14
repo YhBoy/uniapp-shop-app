@@ -1,22 +1,23 @@
 <template>
 	<view>
 		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000">
-			<swiper-item>
+			<swiper-item v-for="(item,index) in bannerList" :key="index">
 				<view class="swiper-item">
-					<image class="swiper-img" src="../../static/1.jpg" mode=""></image>
+					<image class="swiper-img" :src="item.imgUrl" mode=""></image>
 				</view>
 			</swiper-item>
-			<swiper-item>
-				<view class="swiper-item">
-					<image class="swiper-img" src="../../static/2.jpg" mode=""></image>
-				</view>
-			</swiper-item>
+			
 		</swiper>
 	</view>
 </template>
 
 <script>
 	export default {
+		props:{
+			bannerList:{
+				type:Array
+			}
+		},
 		data() {
 			return {
 				

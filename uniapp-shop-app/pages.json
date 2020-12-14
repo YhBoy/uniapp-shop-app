@@ -3,7 +3,7 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "商城",
+				"navigationBarBackgroundColor": "#fff",
 				"app-plus":{
 						"scrollIndicator":"none",
 						"titleNView":{
@@ -40,6 +40,64 @@
         ,{
             "path" : "pages/user/user",
             "style" : {}
+        }
+        ,{
+            "path" : "pages/search/search",
+            "style" : {
+				"navigationBarBackgroundColor":"#FFFFFF",
+				"app-plus":{
+					"scrollIndicator":"none",
+					"titleNView":{
+						"searchInput":{
+							"placeholder":"nike",
+							"disabled":false,
+							"borderRadius":"14px",
+							"align":"left",
+							"backgroundColor":"#f7f7f7",
+							"placeholderColor":"#b3b3b3"
+						},
+						"buttons":[
+							{
+								"color":"#989898",
+								"float":"right",
+								"colorPressed":"#fd68001",
+								"fontSize":"15px",
+								"text":"搜索",
+								"width":"50px"
+							}
+						]
+					}
+				}
+			}
+        }
+        ,{
+            "path" : "pages/search-list/search-list",
+            "style" : {
+            	"navigationBarBackgroundColor":"#FFFFFF",
+            	"app-plus":{
+            		"scrollIndicator":"none",
+            		"titleNView":{
+            			"searchInput":{
+            				"placeholder":"nike",
+            				"disabled":false,
+            				"borderRadius":"14px",
+            				"align":"left",
+            				"backgroundColor":"#f7f7f7",
+            				"placeholderColor":"#b3b3b3"
+            			},
+            			"buttons":[
+            				{
+            					"color":"#989898",
+            					"float":"right",
+            					"colorPressed":"#fd68001",
+            					"fontSize":"15px",
+            					"text":"筛选",
+            					"width":"50px"
+            				}
+            			]
+            		}
+            	}
+            }
         }
     ],
 	"globalStyle": {

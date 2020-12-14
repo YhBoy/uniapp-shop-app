@@ -1,6 +1,6 @@
 <template>
-	<view class="item-wrap">
-		<view class="item" v-for="item in productListData" :key="item.id" :style="'width:'+itemW">
+	<view class="item-wrap" :style="'flex-wrap:'+wrap">
+		<view class="item" v-for="item in productListData" :key="item.id" :style="'width:'+itemW+';flex-wrap:'+wrap">
 			<image class="item-img" :src="item.imgUrl" mode=""></image>
 			<view class="item-content">
 					<text class="item-name">{{item.name}}</text>
@@ -21,6 +21,10 @@
 			itemW:{
 				type:String,
 				default:'375rpx'
+			},
+			wrap:{
+				type:String,
+				default:'wrap'
 			}
 		}
 	}
@@ -29,7 +33,6 @@
 <style scoped>
 	.item-wrap{
 		display: flex;
-		flex-wrap: wrap;
 	}
 	.item{
 		width: 375rpx;

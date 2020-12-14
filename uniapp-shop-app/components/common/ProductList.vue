@@ -1,6 +1,6 @@
 <template>
 	<view class="product-list">
-			<ProductListItem :productListData="productListData" itemW="375rpx" />
+			<ProductListItem :productListData="productListData" itemW="375rpx"  />
 	</view>
 </template>
 
@@ -43,5 +43,5 @@
 	}
 </script>
 
-<style>
+<style scoped>
 </style>
