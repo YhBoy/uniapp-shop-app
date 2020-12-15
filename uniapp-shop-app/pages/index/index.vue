@@ -87,7 +87,7 @@
 			    url: 'http://localhost:3000/index-list', //仅为示例，并非真实接口地址。
 			    success: (res) => {
 					this.tabBar = res.data.data.tabBar
-			        this.newTopBar =  this.initData(res.data.data)
+			        this.newTopBar =  JSON.stringify(this.initData(res.data.data))
 					this.bannerList = res.data.data.data.data
 			    }
 			});
