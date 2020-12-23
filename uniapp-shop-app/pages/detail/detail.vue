@@ -19,14 +19,21 @@
 		<view class="detail-foot">
 			<view class="iconfont icon-dkw_xiaoxi"></view>
 			<view class="iconfont icon-gouwuche"></view>
-			<view class="add-cart">加入购物车</view>
-			<view class="buy">立即购买</view>
+			<view class="add-cart" @tap="showPop()">加入购物车</view>
+			<view class="buy" @tap="showPop()">立即购买</view>
 		</view>
 		
-		<view class="pop">
-			<view class="pop-mask">
-					<view class="pop-box">
-						
+		<view class="pop" v-show="isShow" @touchmove.stop.prevent="">
+			<!--  @touchmove.stop.prevent=""  取消蒙层存在的时候  还能滑动底下的内容 -->
+			<view class="pop-mask" @tap="hidePop()">
+					<view class="pop-box" :animation="animationData">
+						<view>
+							<image class="pop-pic" src="../../static/img/Children1.jpg" mode=""></image>
+						</view>
+						<view class="number">
+							<view>购买数量</view>
+							<UniNumber />
+						</view>
 					</view>
 			</view>
 		</view>
@@ -37,13 +44,17 @@
 <script>
 	import Card from '@/components/common/Card.vue'
 	import ProductListItem from '@/components/common/ProductListItem.vue'
+	import UniNumber from '@/components/uni/uni-number-box/uni-number-box.vue'
 	export default {
 		components:{
 			Card,
-			ProductListItem
+			ProductListItem,
+			UniNumber
 		},
 		data() {
 			return {
+				isShow:false,
+				animationData:{},
 				swiperList:[
 					{imgUrl:'../../static/1.jpg'},
 					{imgUrl:'../../static/2.jpg'},
@@ -78,14 +89,44 @@
 				]
 			}
 		},
+		onBackPress(){// 修改默认返回键   如果弹窗打开的时候 先关闭弹窗  然后再次点击返回  会返回到上一页
+			if( this.isShow ){
+				this.isShow = false
+				return true;  
+			}
+		},  
 		methods: {
-			
+			showPop(){
+				var animation = uni.createAnimation({
+				      duration: 200
+				})
+				// animation.translateY(300).step()
+				// this.animationData = animation.export()
+				this.isShow = true
+				setTimeout(()=>{
+					animation.translateY(0).step()
+					this.animationData = animation.export()
+				},200)
+			},
+			hidePop(){
+				var animation = uni.createAnimation({
+				      duration: 200
+				})
+				animation.translateY(300).step()
+				this.animationData = animation.export()
+				this.isShow = true
+				setTimeout(()=>{
+					animation.translateY(0).step()
+					this.isShow = false
+				},200)
+				
+			}
 		}
 	}
 </script>
 
 <style scoped>
-	
+	 
 	.pop{
 		position: fixed;
 		left: 0;
@@ -164,6 +205,47 @@
 }
 .pop-box{
 	background: #1AAD19;
+}
+
+.pop{
+	position: fixed;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: 999;
+}
+.pop-mask{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.pop-box{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 300px;
+	background-color: rgba(0,0,0,0.5);
+	background: #e8e8e8;
+}
+
+.pop-pic{
+	width: 160rpx;
+	height: 160rpx;
+	margin-top: 20rpx;
+	margin-left: 20rpx;
+}
+
+.number{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20rpx;
+	padding: 0 20rpx;
 }
 
 </style>
