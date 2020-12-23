@@ -88,7 +88,8 @@
 			    success: (res) => {
 					this.tabBar = res.data.data.tabBar
 			        this.newTopBar =  JSON.stringify(this.initData(res.data.data))
-					this.bannerList = res.data.data.data.data
+					this.bannerList = res.data.data.data
+					console.log(this.tabBar,this.newTopBar,this.bannerList)
 			    }
 			});
 		},

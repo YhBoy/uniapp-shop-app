@@ -1,0 +1,25 @@
+
+.scroll-content.data-v-57280228{
+	width: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	height: 80rpx;
+	-webkit-flex-wrap: nowrap;
+	        flex-wrap: nowrap;
+	white-space: nowrap;
+}
+.scroll-item.data-v-57280228{
+	display: inline-block;
+	padding: 10rpx 30rpx;
+	font-size: 32rpx;
+}
+.scroll-name.data-v-57280228{
+	
+	padding: 10rpx 0;
+}
+.f-active-color.data-v-57280228{
+	color: #007AFF;
+	border-bottom: 6rpx solid #007AFF;
+}
+

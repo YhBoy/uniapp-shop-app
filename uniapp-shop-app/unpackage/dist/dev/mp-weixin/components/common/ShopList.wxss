@@ -1,0 +1,35 @@
+
+.shop-title.data-v-9687dfe6{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.shop-item.data-v-9687dfe6{
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	shop-iconalign-items: center;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+}
+.shop-icon.data-v-9687dfe6{
+	position: relative;
+	margin-left: 10rpx;
+}
+.iconfont.data-v-9687dfe6{
+	width: 12rpx;
+	height: 6rpx;
+	position: absolute;
+	left: 0;
+}
+.up.data-v-9687dfe6{
+	top: -24p;
+}
+.down.data-v-9687dfe6{
+	top: -12rpx;
+}
+

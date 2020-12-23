@@ -1,0 +1,13 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "usingComponents": {
+    "index-swiper": "/components/index/indexSwiper",
+    "recommed": "/components/index/recommend",
+    "card": "/components/common/Card",
+    "product-list": "/components/common/ProductList",
+    "banner": "/pages/index/Banner",
+    "icons": "/pages/index/Icons",
+    "hot": "/pages/index/Hot",
+    "shop": "/pages/index/Shop"
+  }
+}

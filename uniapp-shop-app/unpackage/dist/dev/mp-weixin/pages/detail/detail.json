@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "商品详情",
+  "usingComponents": {
+    "card": "/components/common/Card",
+    "product-list-item": "/components/common/ProductListItem"
+  }
+}

@@ -31,7 +31,22 @@
 		}
 	    ,{
             "path" : "pages/category/category",
-            "style" : {}
+            "style" : {
+				"navigationBarBackgroundColor":"#ffffff",
+				"app-plus":{
+					"scrollIndicator":"none",
+					"titleNView":{
+						"searchInput":{
+							"placeholder":"请输入搜索内容",
+							"disabled":true,
+							"borderRadius":"14px",
+							"align":"left",
+							"backgroundColor":"#f7f7f7",
+							"placeholderColor":"#b3b3b3"
+						}
+					}
+				}
+			}
         }
         ,{
             "path" : "pages/cart/cart",
@@ -98,6 +113,25 @@
             		}
             	}
             }
+        }
+        ,{
+            "path" : "pages/detail/detail",
+            "style" : {
+				"navigationBarTitleText":"商品详情",
+				"app-plus":{
+					"scrollIndicator":"none",
+					"titleNView":{
+						"type":"transparent",
+						"buttons":[
+							{
+								"type":"menu"							},
+							{
+								"type":"share"
+							}
+						] 
+					}
+				}
+			}
         }
     ],
 	"globalStyle": {

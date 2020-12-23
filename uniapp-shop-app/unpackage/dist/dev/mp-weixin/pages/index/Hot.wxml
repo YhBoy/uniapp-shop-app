@@ -1,0 +1,1 @@
+<view><product-list-item vue-id="218d249f-1" productListData="{{productListData}}" itemW="250rpx" bind:__l="__l"></product-list-item></view>
